@@ -1,16 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import registerServiceWorker from './registerServiceWorker'
 
-import { Provider } from 'react-redux';
-import Store from './store';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import { Provider } from 'react-redux'
+import Store from './store'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
-const StoreInstance = Store();
+const StoreInstance = Store()
 
-injectTapEventPlugin();
+injectTapEventPlugin()
 
 ReactDOM.render(
   <Provider store={StoreInstance}>
@@ -19,4 +19,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-registerServiceWorker();
+registerServiceWorker()

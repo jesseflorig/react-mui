@@ -1,21 +1,21 @@
 import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
-import Cart from './cart'
-import * as cartActions from '../../actions/cart'
+import ResultList from './resultList'
+import * as resultListActions from '../../actions/resultList'
 
 function mapStateToProps(state) {
   return {
-    cart: state.cart
+    resultList: state.resultList
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(cartActions, dispatch)
+    actions: bindActionCreators(resultListActions, dispatch)
   }
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Cart)
+)(ResultList)

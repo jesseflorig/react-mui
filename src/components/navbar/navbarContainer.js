@@ -1,21 +1,21 @@
 import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
-import Cart from './cart'
-import * as cartActions from '../../actions/cart'
+import Navbar from './navbar'
+import * as navbarActions from '../../actions/navbar'
 
 function mapStateToProps(state) {
   return {
-    cart: state.cart
+    navbar: state.navbar
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(cartActions, dispatch)
+    actions: bindActionCreators(navbarActions, dispatch)
   }
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Cart)
+)(Navbar)

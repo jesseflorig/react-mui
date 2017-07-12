@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-import './shelf.css';
+import React, { Component } from 'react'
+import './shelf.css'
+
+import RaisedButton from 'material-ui/RaisedButton'
 
 class Shelf extends Component {
   constructor(props) {
@@ -15,17 +17,16 @@ class Shelf extends Component {
   }
 
   onAddItemToCart(item){
-    this.props.addItem(item);
+    this.props.addItem(item)
   }
 
   render() {
     const ShelfItems = this.state.shelfItems.map((item, idx) => {
       return (
         <li key={idx}>
-          <button onClick={() => this.onAddItemToCart(item)}>
-            [+]
-          </button>
-          {item}
+          <RaisedButton label={item}
+                        onClick={() => this.onAddItemToCart(item)}>
+          </RaisedButton>
         </li>
       )
     });
@@ -41,4 +42,4 @@ class Shelf extends Component {
   }
 }
 
-export default Shelf;
+export default Shelf
