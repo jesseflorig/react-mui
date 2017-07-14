@@ -1,33 +1,39 @@
 import React, { Component } from 'react'
 
 import './resultList.css'
+import ListItem from './listItem'
 
 class ResultList extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       navbarItems: [
-        'one',
-        'two',
-        'three',
+        { name: 'Chet Americanman', dataSources: ['CCR', 'DNB'], locationCount: 0, countries: ['US', 'RU'], type: 'person', lastUpdated:"1/1/2017" , eoiTags: ['Russia'] },
+        { name: 'Joseph Block'    , dataSources: ['DNB']       , locationCount: 1, countries: ['US'], type: 'person', lastUpdated:"4/20/2017"      , eoiTags: []         },
+        { name: 'Chet Americanman', dataSources: ['CCR', 'DNB'], locationCount: 0, countries: ['US', 'RU'], type: 'person', lastUpdated:"1/1/2017" , eoiTags: ['Russia'] },
+        { name: 'Joseph Block'    , dataSources: ['DNB']       , locationCount: 1, countries: ['US'], type: 'person', lastUpdated:"4/20/2017"      , eoiTags: []         },
+        { name: 'Chet Americanman', dataSources: ['CCR', 'DNB'], locationCount: 0, countries: ['US', 'RU'], type: 'person', lastUpdated:"1/1/2017" , eoiTags: ['Russia'] },
+        { name: 'Joseph Block'    , dataSources: ['DNB']       , locationCount: 1, countries: ['US'], type: 'person', lastUpdated:"4/20/2017"      , eoiTags: []         },
+        { name: 'Chet Americanman', dataSources: ['CCR', 'DNB'], locationCount: 0, countries: ['US', 'RU'], type: 'person', lastUpdated:"1/1/2017" , eoiTags: ['Russia'] },
+        { name: 'Joseph Block'    , dataSources: ['DNB']       , locationCount: 1, countries: ['US'], type: 'person', lastUpdated:"4/20/2017"      , eoiTags: []         },
+        { name: 'Chet Americanman', dataSources: ['CCR', 'DNB'], locationCount: 0, countries: ['US', 'RU'], type: 'person', lastUpdated:"1/1/2017" , eoiTags: ['Russia'] },
+        { name: 'Joseph Block'    , dataSources: ['DNB']       , locationCount: 1, countries: ['US'], type: 'person', lastUpdated:"4/20/2017"      , eoiTags: []         },
       ]
     }
   }
 
   render() {
-    const NavbarItems = this.state.navbarItems.map((item, idx) => {
+    const ListItems = this.state.navbarItems.map((item, idx) => {
       return (
-        <li key={idx}>
-          {item}
-        </li>
+        <ListItem key={idx} content={item}></ListItem>
       )
     });
 
     return(
-      <div>
-        Result List
-      </div>
+      <ul className="ResultList">
+        {ListItems}
+      </ul>
     )
   }
 }

@@ -1,0 +1,6 @@
+.SplitView {
+  display: flex;
+}
+.RightSplit {
+  flex-grow: 1;
+}

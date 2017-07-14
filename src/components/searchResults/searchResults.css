@@ -1,0 +1,25 @@
+.HeadingContainer {
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+.Heading {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.HeadingActions {
+  list-style: none;
+  float: right;
+  margin-top: 0;
+  margin-right: 1em;
+  padding-left: 0;
+}
+.HeadingAction {
+  display: inline-block;
+}
+.HeadingAction:not(:last-of-type){
+  margin-right: 1em;
+}
+.Subheading {
+  margin-bottom: 2em;
+}

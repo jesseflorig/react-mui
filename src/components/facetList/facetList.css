@@ -1,0 +1,9 @@
+.FacetListContainer {
+  margin-right: 1em;
+  width: 12em;
+}
+.FacetList {
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+}

@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import IconButton from 'material-ui/IconButton'
 
 import './navbar.css';
-import ClippyIcon from 'material-ui-community-icons/icons/clippy'
-import CoffeeIcon from 'material-ui-community-icons/icons/coffee'
 import ChartPieIcon from 'material-ui-community-icons/icons/chart-pie/'
+import InboxIcon from 'material-ui-community-icons/icons/inbox'
+import LinkIcon from 'material-ui-community-icons/icons/link'
+import MagnifyIcon from 'material-ui-community-icons/icons/magnify'
 
 class Navbar extends Component {
   constructor(props) {
@@ -20,21 +21,13 @@ class Navbar extends Component {
   }
 
   render() {
-    const NavbarItems = this.state.navbarItems.map((item, idx) => {
-      return (
-        <li key={idx}>
-          {item}
-        </li>
-      )
-    });
-
     return(
       <div>
         <ul className="LeftNav">
-          <li><IconButton><CoffeeIcon/></IconButton></li>
+          <li><IconButton><MagnifyIcon/></IconButton></li>
           <li><IconButton><ChartPieIcon/></IconButton></li>
-          <li><IconButton><ClippyIcon/></IconButton></li>
-          <li><IconButton><ClippyIcon/></IconButton></li>
+          <li><IconButton><InboxIcon/></IconButton></li>
+          <li><IconButton><LinkIcon/></IconButton></li>
         </ul>
       </div>
     )

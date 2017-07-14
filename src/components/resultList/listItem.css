@@ -1,0 +1,27 @@
+.ListItem:not(:last-of-type) {
+  margin-bottom: 1em;
+}
+.ListRow {
+  padding: .5em;
+}
+.FlexRow {
+  display: flex;
+}
+.RowLeft {
+  flex-grow: 1;
+}
+.ItemTitle {
+  margin-left: .2em;
+  text-decoration: none;
+}
+.ActionButtonContainer {
+  display: flex;
+  align-items: center;
+}
+.ActionButtons {
+  list-style: none;
+  padding-left: 0;
+}
+.ActionButton {
+  display: inline-block;
+}

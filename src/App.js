@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import './App.css'
+import SearchBar from 'material-ui-search-bar'
+import FlatButton from 'material-ui/FlatButton'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import IconButton from 'material-ui/IconButton'
 import AppBar from 'material-ui/AppBar'
-import ClippyIcon from 'material-ui-community-icons/icons/clippy'
+import SplitView from './components/splitView/splitView'
 import Navbar from './components/navbar/navbarContainer'
-import ResultList from './components/resultList/resultList'
+import SearchResults from './components/searchResults/searchResults'
 
 class App extends Component {
   render() {
@@ -14,17 +15,14 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <AppBar
-            title="React App with Material UI"
-            iconElementRight={<IconButton><ClippyIcon /></IconButton>}
+            iconElementLeft={
+              <SearchBar onChange={()=> true}
+                         onRequestSearch={()=> true}
+              />
+            }
+            iconElementRight={<FlatButton label="Username"/>}
           />
-          <div className="SplitView">
-            <div className="SplitChild LeftSplit">
-              <Navbar/>
-            </div>
-            <div className="SplitChild RightSplit">
-              <ResultList/>
-            </div>
-          </div>
+        <SplitView leftContent={<Navbar/>} rightContent={<SearchResults/>}/>
         </div>
       </MuiThemeProvider>
     );

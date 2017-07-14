@@ -1,0 +1,14 @@
+.MetaLabel {
+  width: 10em;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+.MetaLabelContainer,
+.LabelIcon,
+.LabelText {
+  display: inline-block;
+}
+.LabelIcon {
+  margin-right: .5em;
+}

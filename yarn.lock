@@ -3941,6 +3941,12 @@ material-ui-community-icons@^0.15.0:
     react "^15.0.0"
     react-dom "^15.0.0"
 
+material-ui-search-bar@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/material-ui-search-bar/-/material-ui-search-bar-0.2.4.tgz#194728408c8b0b5d0647190cd391b8227c75aa11"
+  dependencies:
+    prop-types "^15.5.8"
+
 material-ui@^0.15.0:
   version "0.15.4"
   resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-0.15.4.tgz#c66b210884f1584108526c498b2c462aee4c3dbb"
@@ -4908,7 +4914,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
